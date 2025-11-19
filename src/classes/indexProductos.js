@@ -1,0 +1,14 @@
+import { Arco_Caza } from "./productos/Arco_Caza.js";
+import { Armadura_Cuero } from "./productos/Armadura_Cuero.js";
+import { Botas } from "./productos/Botas.js";
+import { Casco } from "./productos/Casco.js";
+import { Elixir_Legendario } from "./productos/Elixir_Legendario.js";
+import { Escudo_Roble } from "./productos/Escudo_Roble.js";
+import { Espada_Corta } from "./productos/Espada_Corta.js";
+import { Espada_Runica } from "./productos/Espada_Runica.js";
+import { Hacha } from "./productos/Hacha.js";
+import { Mandoble_Epico } from "./productos/Mandoble_Epico.js";
+import { Manzana } from "./productos/Manzana.js";
+import { Placas_Draconicas } from "./productos/Placas_draconicas.js";
+import { Pocion_Grande } from "./productos/Pocion_Grande.js";
+import { Pocion_Peque } from "./productos/Pocion_Peque.js";
