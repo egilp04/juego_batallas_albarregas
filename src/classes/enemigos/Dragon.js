@@ -1,4 +1,4 @@
-import { Enemigo } from "../classes/Enemigo.js";
+import { Enemigo } from "./Enemigo.js";
 
 export class Dragon extends Enemigo {
   constructor(nombre, avatar, ataque, hp, habilidad) {
