@@ -1,3 +1,4 @@
+import { Producto } from "../productos/Producto.js";
 export class Jugador {
   constructor(
     nombre,
@@ -72,15 +73,23 @@ export class Jugador {
     return this._puntos;
   };
 
-  addObjInventario = function (producto) {
-    const longitudMax = 6;
+  addObjInventario = function (producto, longitudMax = 6) {
     if (this._inventario.length >= longitudMax) {
       console.log("no se puede comprar más");
       return;
     }
-    const productoComprado = structuredClone(producto);
+    const productoComprado = producto.clonarProducto();
     this._inventario.push(productoComprado);
-    this.visualEfectos();
+    return this._inventario;
+  };
+
+  eliminarObjInventario = function (producto) {
+    const indexDelete = this._inventario.findIndex(
+      (p) => p.nombre === producto.nombre
+    );
+    if (indexDelete === -1) return false;
+    this._inventario.splice(indexDelete, 1);
+    return true;
   };
 
   obtenerEstadisticasFinales = function () {
@@ -125,9 +134,5 @@ export class Jugador {
   verificarTamInventario = function () {
     if (!this.inventario || this.inventario.length <= 0) return false;
     else return true;
-  };
-
-  visualEfectos = function () {
-    console.log("efecto del boton, del color de la tarjeta");
   };
 }

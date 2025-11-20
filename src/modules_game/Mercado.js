@@ -132,24 +132,26 @@ const listaProductos = [
 ];
 
 let listaProductosFinales = [];
+
 export function filtrarProductos(tipoRareza) {
   return listaProductosFinales.filter(
     (producto) => tipoRareza === producto.rareza
   );
 }
+
 export function aplicarDescuento(tipoRareza = "raro", descuento = 0.2) {
-  this.listaProductos.forEach((producto) => {
+  listaProductosFinales = [];
+  listaProductos.forEach((producto) => {
+    const productoClonado = producto.clonarProducto();
     if (producto.rareza === tipoRareza)
-      listaProductosFinales.push(
-        producto.aplicarDescuento(producto, descuento)
-      );
+      productoClonado.aplicarDescuento(descuento);
+    listaProductosFinales.push(productoClonado);
   });
+  return listaProductosFinales;
 }
+
 export function buscarProductoNombre(nombreProducto) {
   return listaProductosFinales.filter(
     (producto) => nombreProducto === producto.nombre
   );
-}
-export function obtenerListaProductosFinales() {
-  return this.listaProductosFinales;
 }

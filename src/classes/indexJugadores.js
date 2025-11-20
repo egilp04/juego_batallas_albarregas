@@ -1,1 +1,1 @@
-import { Cazador } from "./jugadores/Cazador.js";
+export { Cazador } from "./jugadores/Cazador.js";

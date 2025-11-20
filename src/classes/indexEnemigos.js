@@ -1,5 +1,5 @@
-import { Goblin } from "./enemigos/Goblin.js";
-import { Dragon } from "./enemigos/Dragon.js";
-import { Lobo } from "./enemigos/Lobo.js";
-import { Bandido } from "./enemigos/Bandido.js";
-import { Jefe } from "./enemigos/Jefe.js";
+export { Goblin } from "./enemigos/Goblin.js";
+export { Dragon } from "./enemigos/Dragon.js";
+export { Lobo } from "./enemigos/Lobo.js";
+export { Bandido } from "./enemigos/Bandido.js";
+export { Jefe } from "./enemigos/Jefe.js";
